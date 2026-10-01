@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eeeeec;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 30px;
+}
+
+
+/* Resume */
+
+.resume {
+  max-width: 900px;
+  margin: auto;
+  background: #f9f9f7;
+  border: 2px solid #9d3028;
+  border-radius: 18px;
+  padding: 50px;
+}
+
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h1 {
+  color: #9d3028;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.info p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* Sections */
+
+section {
+  margin-top: 35px;
+}
+
+section h2 {
+  color: #9d3028;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 112px;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background: #9d3028;
+}
+
+
+.item {
+  display: grid;
+  grid-template-columns: 90px 45px 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+
+/* Date */
+
+.date {
+  color: #9d3028;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+
+/* Circle */
+
+.circle {
+  width: 17px;
+  height: 17px;
+  border: 3px solid #9d3028;
+  border-radius: 50%;
+  background: #f9f9f7;
+  z-index: 2;
+}
+
+
+/* Content */
+
+.content h3 {
+  color: #9d3028;
+  font-size: 15px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.content p {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* Skills */
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px 40px;
+  padding-left: 18px;
+}
+
+.skills li {
+  font-size: 12px;
+}
+
+.skills li::marker {
+  color: #9d3028;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  
+  body {
+    padding: 10px;
+  }
+  
+  .resume {
+    padding: 25px 20px;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .info h1 {
+    font-size: 28px;
+  }
+  
+  .info p {
+    font-size: 11px;
+  }
+  
+  .timeline::before {
+    left: 8px;
+  }
+  
+  .item {
+    grid-template-columns: 25px 1fr;
+    gap: 12px;
+  }
+  
+  .date {
+    grid-column: 2;
+  }
+  
+  .circle {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  
+  .content {
+    grid-column: 2;
+  }
+  
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
